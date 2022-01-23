@@ -1,0 +1,148 @@
+
+*{
+   box-sizing: border-box;
+}
+html{
+   background-color: rgb(33, 3, 46);
+}
+
+
+/*Defines the Grid */
+main{
+   display: grid;
+   grid-template-columns: 400px 400px ;
+   grid-template-rows: auto;
+   grid-template-areas: 
+      "header header header"
+      "sidebar content content"
+      "sidebar aside aside";
+
+   grid-gap: 1em;
+   border-radius: 1em;
+   background: rgb(165, 228, 48);
+   border: 5px solid rgb(236, 78, 32);
+   padding:20px;
+   margin: 20px;
+}
+header{
+   grid-area: header;
+   border-radius: 1em;
+   padding: 20px;
+   margin: 20px;
+   border: 8px solid rgb(152, 119, 230);
+   color: black;
+   text-shadow: 4px 4px 4px  rgb(165, 228, 48);
+   background-image: linear-gradient(rgb(165, 228, 48),rgb(152, 119, 230),rgb(236, 78, 32), rgb(252, 154, 17));
+   text-align: center;
+   font-size: 45px;
+}
+img{
+   width: 300px;
+   border-radius: 1em;;
+}
+
+/*Item 1*/
+.content{
+   grid-area: content;
+   border-radius: 1em;
+   padding: 2rem;
+   border: 2px solid rgb(236, 78, 32);
+   background:rgb(152, 119, 230);
+}
+.content h2{
+   color: black;
+   text-shadow: 6px 6px 6px rgb(252, 154, 17);
+}
+/*Item 2*/
+.sidebar{
+   grid-area: sidebar;
+   height: fit-content;
+   border-radius: 1em;
+   padding: 2rem;
+   border: 2px solid rgb(165, 228, 48);
+   background:rgb(152, 119, 230);
+   border: 2px solid rgb(236, 78, 32);
+}
+.sidebar h2{
+   color: black;
+   text-shadow: 6px 6px 6px rgb(252, 154, 17);
+}
+.sidebar ul{
+   font-family: 'sofia';
+   font-size: 2em;
+   list-style-type: none;
+}
+/*Item 3*/
+.aside{
+   grid-area: aside;
+   border-radius: 1em;
+   padding: 2rem;
+   border: 2px solid rgb(236, 78, 32);
+   background:rgb(152, 119, 230);
+}
+.aside h2{
+   color: black;
+   text-shadow: 6px 6px 6px rgb(252, 154, 17);
+}
+/*New Grid*/
+section{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+   /* auto-fit means the browser decides how many columns to make but they have to be a minimum of 400px and maximum 1fr this makes the grid responsive*/
+   grid-gap: 5px;
+   padding:20px;
+   margin: 20px;
+   background-color: rgb(252, 154, 17);
+   border-radius: 1em;
+   border: 5px solid rgb(165, 228, 48);
+}
+/*grid items*/
+.gallery{
+   display: flex;
+   flex-flow: column;/*makes the images flow vertically in columns instead of horizantally*/
+   border-radius: 1em;
+   padding: 1em;
+   border: 5px solid rgb(165, 228, 48);
+   background: rgb(152, 119, 230); 
+}
+.gallery img{
+   align-self: center;
+}
+.gallery h2{
+   color: black;
+   text-shadow: 6px 6px 6px rgb(165, 228, 48);
+}
+h1{
+   font-family: 'Emilys Candy';
+   text-align: center;
+   font-size: 2em;
+}
+h2{
+   font-family: 'Emilys Candy';
+   text-align: center;
+   font-size: 40px;
+}
+
+h4{
+   font-family: 'creepster', cursive;
+   font-size: 1em;
+}
+p{
+   font-family: 'sofia';
+   font-size: 2em;
+   text-align: center;
+}
+footer{
+   border-radius: 1em;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+   font-size: 75px;
+   color: rgb(165, 228, 48);
+   text-shadow: 10px 10px rgb(21, 18, 29);
+   font-family: 'creepster';
+   background-image: repeating-linear-gradient(rgb(165, 228, 48),rgb(152, 119, 230),rgb(236, 78, 32), rgb(252, 154, 17));
+   border: 8px solid rgb(152, 119, 230);
+}
+
+
